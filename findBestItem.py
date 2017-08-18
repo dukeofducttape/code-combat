@@ -6,6 +6,6 @@ def findBestItem(items):
         item = items[itemIndex]
         if item.value / hero.distanceTo(item) > bestValue:
             bestItem = item
-            bestValue = valueOverDistance(item)
+            bestValue = item.value / hero.distanceTo(item)
         itemIndex += 1     
     return bestItem
