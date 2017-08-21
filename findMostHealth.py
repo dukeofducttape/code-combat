@@ -1,11 +1,22 @@
-def findMostHealth(enemies):
+#while-loop version:
+def findMostHealth(units):
     target = None
     targetHealth = 0
-    enemyIndex = 0
-    while enemyIndex < len(enemies):
-        enemy = enemies[enemyIndex]
-        if enemy.health > targetHealth:
-            target = enemy
-            targetHealth = enemy.health
-        enemyIndex += 1
+    unitIndex = 0
+    while unitIndex < len(units):
+        unit = units[unitIndex]
+        if unit.health > targetHealth:
+            target = unit
+            targetHealth = unit.health
+        unitIndex += 1
+    return target
+
+#for-loop version:
+def findMostHealth(units):
+    target = None
+    targetHealth = 0
+    for unit in units:
+        if unit.health > targetHealth:
+            target = unit
+            targetHealth = unit.health
     return target
