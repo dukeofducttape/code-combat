@@ -35,7 +35,7 @@ def findLeastHealth(units):
     target = None
     targetHealth = 9999
     for unit in units:
-        if unit.health < targetHealth and unit.health > 30:
+        if unit.health < targetHealth and unit.type == "soldier":
             target = unit
             targetHealth = unit.health
     return target
@@ -43,9 +43,10 @@ def findLeastHealth(units):
 def helpTroops():
     friends = hero.findFriends()
     weak = findLeastHealth(friends)
-    hero.move(weak.pos)
+    weakLoc = {"x":weak.pos.x - 2, "y":weak.pos.y - 2}
+    hero.move(weakLoc)
     enemy = weak.findNearestEnemy()
-    if enemy:
+    if enemy and weak.distanceTo(enemy) < 10:
         while enemy.health > 0:
             hero.attack(enemy)
     
