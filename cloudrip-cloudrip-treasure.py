@@ -1,3 +1,7 @@
+# --------------------------------------------------------------------------
+# I got this solution from https://gist.github.com/a1ip/b948e20a7f5f37c39aae
+# The original code was in JavaScript so I did the work of "translating" the code to Python and made some minor changes.
+# --------------------------------------------------------------------------
 # Your goal is to collect coins / gems.
 # This level is repeatable. If you win, the difficulty and rewards will increase.
 # If you fail, you have to wait a day to resubmit.
