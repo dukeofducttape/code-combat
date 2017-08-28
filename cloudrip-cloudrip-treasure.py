@@ -107,7 +107,7 @@ def lowestHealthFriend():
 
 while True:
     items = hero.findItems()
-    enimies = hero.findEnemies()
+    enemies = hero.findEnemies()
     if hero.health < hero.maxHealth * 0.2:
         summonTroops()
     commandTroops()
